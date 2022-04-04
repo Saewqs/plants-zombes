@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+			display: block;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			transition: 1s;
+		}
+		/*.slant{
+			position: absolute;
+			margin-left: 650px;
+			margin-top: 100px;
+			font-size: 20px;
+		}*/
+		.score{
+		}
+		.zom{
+
+		}
+		.zom1{
+
+		}
+		.zom2{
+			
+		}
+		.zom3{
+			
+		}
+		.zom4{
+			
+		}
+		.end{
+			background-image: url(1.jpg);
+			display: none;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		<h5 style="position: absolute; left: 600px; top: 50px" class="score">КОЛИЧЕСТВО ОЧКОВ</h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 250px; left: 600px;">		
+		<img class="shooter" src="peashooter.png"  style="top: 350px; left: 600px;">	
+		<img class="shooter" src="peashooter.png"  style="top: 450px; left: 600px;">	
+		<img class="shooter" src="peashooter.png"  style="top: 550px; left: 600px;">
+		<img class="shooter" src="peashooter.png"  style="top: 650px; left: 600px;">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 220px; left: 1400px;">
+		<img class="zombies" src="zombie2.png" style="top: 320px; left: 1400px;">
+		<img class="zombies" src="zombie2.png" style="top: 420px; left: 1400px;">
+		<img class="zombies" src="zombie4.png" style="top: 520px; left: 1400px;">
+		<img class="zombies" src="zombie4.png" style="top: 620px; left: 1400px;">
+	</div>
+<script>
+	let zom = 1500
+	let zom1 = 1500
+	let zom2 = 1500
+	let zom3 = 1500
+	let zom4 = 1500
+
+	let b = document.querySelectorAll(".box")
+	let sc = document.querySelectorAll(".score")
+	let score = 0
+	let zombies_elem = document.querySelectorAll(".zombies")
+	let move_left = 1400
+	let sho = document.querySelectorAll(".shooter")
+	let end = document.querySelectorAll(".end")
+
+	zombies_elem[0].onclick = function() {
+		zom = zom - 300
+		zombies_elem[0].style.left = zom + "px";
+		if (zom == 600){	
+			sho[0].style.display = "none"
+			score = score + 1
+			sc.innerHTML = score
+		}
+		if (score == 5) {
+			end.style.display = "block"
+			end.innerHTML = score
+			alert("молодец")
+		}
+		if (score == 5) {
+			b.style.display = "none"
+		}
+	}
+
+		zombies_elem[1].onclick = function() {
+			zom1 = zom1 - 300;
+		zombies_elem[1].style.left = zom1 + "px"
+		if (zom1 == 600){
+			sho[1].style.display = "none"
+			score = score + 1
+			sc.innerHTML = score	
+		}
+		if (score == 5) {
+			end.style.display = "block"
+			end.innerHTML = score
+			alert("молодец")
+		}
+		if (score == 5) {
+			b.style.display = "none"
+		}
+	}
+		zombies_elem[2].onclick = function() {
+			zom2 = zom2 - 300;
+		zombies_elem[2].style.left = zom2 + "px"
+		if (zom2 == 600){
+			sho[2].style.display = "none"
+			score = score + 1
+			sc.innerHTML = score
+		}
+		if (score == 5) {
+			end.style.display = "block"
+			end.innerHTML = score
+			alert("молодец")
+		}
+		if (score == 5) {
+			b.style.display = "none"
+		}
+	}
+
+		zombies_elem[3].onclick = function() {
+			zom3 = zom3 - 300;
+		zombies_elem[3].style.left = zom3 + "px"
+		if (zom3 == 600){
+			sho[3].style.display = "none"
+			score = score + 1
+			sc.innerHTML = score
+		}
+		if (score == 5) {
+			end.style.display = "block"
+			end.innerHTML = score
+			alert("молодец")
+		}
+		if (score == 5) {
+			b.style.display = "none"
+		}
+	}
+		zombies_elem[4].onclick = function() {
+			zom4 = zom4 - 300;
+		zombies_elem[4].style.left = zom4 + "px"
+		if (zom4 == 600){
+			sho[4].style.display = "none"
+			score = score + 1
+			sc.innerHTML = score
+		}
+		if (score == 5) {
+			end.style.display = "block"
+			end.innerHTML = score
+			alert("молодец")
+
+		}
+		if (score == 5) {
+			b.style.display = "none"
+		}
+	}
+
+
+			
+
+</script>
+</body>
+</html>
